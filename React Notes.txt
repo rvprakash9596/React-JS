@@ -1,5 +1,7 @@
 						       React - JS [ 27-Aug-2024 ]
 --------------------------------------------------------------------------------------------------------------------------------------
+						       Detailed - Topics Covered
+--------------------------------------------------------------------------------------------------------------------------------------
 1. What is React
 2. Working of DOM
 3. Problems with JavaScript
@@ -19,6 +21,9 @@
 15.Dynamic Components
 16.Reusable Components
 17.Including Bootstrap
+18.Fragments
+
+--------------------------------------------------------------------------------------------------------------------------------------
 							1. What is React
 						================================
 
@@ -269,7 +274,27 @@ one default export			multiple named exports				named export(s) and one default e
 						     Project ==>  TODO App UI
 					      =======================================
 
+						     Project ==>  Bharat Clock
+					      =======================================
 
+This is the clock that shows the time in Bharat at all times.
+This is the current time : 29/08/2024 - 03:26:48 PM
+
+
+=====================================================================================================================================
+
+							  18. Fragments
+						  =============================
+
+1. What ? Allows grouping of multiple elements without extra DOM nodes.
+
+2. Why ?
+.Returns multiple elements without a wrapping parent.
+.Cleaner DOM and consistent styling.
+
+3. How ? Two syntaxes :
+   1. <React.Fragment>..</React.Fragment>
+   2. Short: <>..</>
 
 
 
