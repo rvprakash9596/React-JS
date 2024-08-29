@@ -1,0 +1,284 @@
+						       React - JS [ 27-Aug-2024 ]
+--------------------------------------------------------------------------------------------------------------------------------------
+1. What is React
+2. Working of DOM
+3. Problems with JavaScript
+4. Working of React							
+5. JS Vs React
+6. Introduction to Components
+7. Setup IDE
+   7.1 Install Latest Node
+   7.2 VS Code Extensions and Settings
+8. Create a React App
+9. Project Structure
+10.File Extensions
+11.Class vs Function Components
+12.What is JSX?
+13.Exporting component
+14.Other important points
+15.Dynamic Components
+16.Reusable Components
+17.Including Bootstrap
+							1. What is React
+						================================
+
+1. JavaScript library to build Dynamic and Interactive user interface.
+2. Developed at Facebook in 2001.
+3. Currently most widely used JS Library for Front-End Develoment.
+4. Used to create single page application (SPA).
+
+							2. Working of DOM
+						================================
+
+1. Browser takes HTML and create DOM.
+2. JS helps us to modify DOM based on User Actions or Events.
+3. In big applications , working with DOM becomes complicated. 
+
+						  3. Problems with JavaScript
+						================================
+1. React has a simpler mental model.
+2. JS is cumbersome(Time Taken).
+3. JS is Error-prone.
+4. JS is Hard to maintain.
+
+						      4. Working of React
+						================================
+
+1. No need to worry about querying and updating DOM.
+2. React creates a web page with small and reusable Components.
+3. React will take care of creating and updating DOM element.
+4. It saves a lot of time , cheezein aasan hai, pahle se cheezein likhi hui hain.
+
+							  5. JS Vs React
+						================================
+
+1. JS is Imperative : You defines steps to reach your desired state.
+         -----------
+2. React is Declarative : You define the target UI state and then react figures out how to reach that state.
+	    -----------
+						        6. Introduction to Components
+						=============================================
+
+1. Components helps us to write reusables , modular and better organised code.
+2. React application is a tree of Components with App Component as the root bringing everything together.
+
+							7. Setup IDE
+						============================
+
+1. IDE : Integrated Development Environment.
+2. Software suite that consolidates basis tools required for software development.
+3. Designed to improve developer efficiency.
+4. Code Autocomplete.
+5. Syntax Highlighting
+6. Version Control
+7. Error Checking
+
+						     7.1 Install Latest Node
+						=================================
+1. Search Download NodeJS : https://nodejs.org/en/download/package-manager
+2. Download & Install VS Code
+3. Keep your software up to date.
+
+						  7.2 VS Code Extensions and Settings
+						=======================================
+1. Live Server / Live Preview
+2. Prettier (Format on save)
+3. Line Wrap
+4. Tab size from 4 to 2
+
+                                        	      8. Create a React App
+						=================================
+
+                              
+1. Official tool is CRA (Create React APP).
+2. Vite is a modern tool to create React Project.
+3. Vite products Quick and Small bundle size.
+4. Vite : Use "npm run dev" to launch dev server.
+5. Use npm start for CRA. NPM = Node Package Manager
+
+======================================================================================================================================
+PS F:\React Tutorial> npm create vite@latest
+--------------------------------------------
+> npm
+> create-vite
+
+√ Project name: ... first-react-app
+		    ---------------
+√ Select a framework: » React
+		       -------
+√ Select a variant: » JavaScript
+		      -----------
+Scaffolding project in F:\React Tutorial\first-react-app...
+			
+Done. Now run:
+
+  cd first-react-app
+  npm install
+  npm run dev
+
+PS F:\React Tutorial> cd first-react-app
+		     --------------------
+PS F:\React Tutorial\first-react-app> npm install
+				     --------------
+added 263 packages, and audited 264 packages in 1m
+
+102 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS F:\React Tutorial\first-react-app> npm run dev
+				     --------------
+> first-react-app@0.0.0 dev
+> vite
+
+
+  VITE v5.4.2  ready in 1134 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+======================================================================================================================================
+
+							9. Project Structure
+						====================================
+
+1. node_modules/has all the installed node packages
+2. public/Directory:Contains static files that don't change.
+3. src/Directory:Main Folder for the React code.
+   3.1. components/: Reusable parts of the UI,like buttons or headers.
+   3.2. assets/: Images,fonts,and other static files.
+   3.3. styles/: CSS or stylesheets.
+4. package.json contains informationabout this project like name,version,dependencies on other React Packages.
+5. vite.config.js contains vite config.
+
+======================================================================================================================================
+
+							Creating React Components
+						      =============================
+10.File Extensions
+11.Class vs Function Components
+12.What is JSX?
+13.Exporting component
+14.Other important points
+15.Dynamic Components
+16.Reusable Components
+
+							10.File Extensions
+						=====================================
+
+.JS
+    .Stands for JavaScript.
+    .Contains regular JavaScript Codes
+    .Used for general logic and components
+
+.JSX
+    .Stands for JavaScript XML
+    .Combines JavaScript with HTML - like tags
+    .Makes it easier to design UI Components   
+
+							11.Class vs Function Components
+						===============================================
+
+Class Component :
+  .Stateful :Can manage state.
+  .Lifecycle:Access to lifecycle methods.
+  .Verbose:More boilerplate code.
+  .Not Preferred anymore.
+Functional Component :(Mostly Used Now a Days)
+  .Initially stateless.
+  .Can use Hooks for state and effects.
+  .Simpler and more concise.
+  .More Popular.
+
+
+								12.What is JSX?
+							===============================
+
+1. Definition : JSX determines how the UI will look whenever the components is used.
+2. Not HTML : Though it resembles HTML,you're actually writing JSX,which stands for JavaScript.
+3. Conversion : JSX gets converted to regular JavaScript.
+4. Babeljs.io/repl is a tool that allows you to see how JSX is transformed into javascript.
+
+
+							  13.Exporting component
+						    ===================================
+
+Component.js				Components.js					MixedComponent.js
+					export function					export function
+export default				Slider(){					Avatar(){
+function				 .....						   .....
+Button() {				 }						  }
+...					export function  				export default
+}					CheckBox(){					function
+					  .....						FriendsList(){
+					 }						.....
+											 }
+
+
+
+one default export			multiple named exports				named export(s) and one default export
+
+
+
+1.Enables the use of a component in other parts.
+2.Default Export:Allows exporting a single component as the default from a module.
+3.Named Export:Allows exporting multiple items from a module.
+4.Importing:To use an exported component, you need to import it in the destination file using import syntax.
+
+
+							14.Other important points
+						==========================================
+
+1.Naming: Must be capitalized;lowercase for default HTML.
+2.HTML: Unlike vanilla JS where you can't directly write HTML,in React,you can embed HTML-like syntax using JSX.
+3.CSS:In React,CSS can be directly imported into component files,allowing for modular and component-specific styling.
+
+
+							15.Dynamic Components
+						    ==============================
+
+1. Dynamic Content : JSX allows the creation of dynamic and interactive UI components.
+2. JavaScript Expressions : Using {},we can embed any JS expression directly within JSX.This includes variables,function calls and more.
+
+							16.Reusable Components
+						    ==============================
+1. Modularity:Components are modular,allowing for easy reuse across different parts of an application.
+2. Consistency:Reusing components ensures UI consistency and reduces the chance of discrepancies.
+3. Efficiency:Reduces development time and effort by avoiding duplication of code.
+4. Maintainability:Changes made to a reused componen reflect everywhere it's used,Simplifying updates and bug fixes.
+
+
+======================================================================================================================================
+							17.Including Bootstrap
+						   ===============================
+1. Responive:Mobile-first design for all device sizes.
+2. Components:Pre-Styled elements like buttons and navbars.
+3. Customizable:Modify default styles as needed.
+4. Cross-Browser:Consistent look across browser.
+5. Open-Source:Free with community support.
+
+
+1.Install:
+  npm i bootstrap@5.3.3
+
+2.Import:
+  import "bootstrap/dist/css/bootstrap.min.css";
+
+======================================================================================================================================
+						     Project ==>  TODO App UI
+					      =======================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
