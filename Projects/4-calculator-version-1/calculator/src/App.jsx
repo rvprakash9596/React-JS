@@ -3,7 +3,12 @@ import './App.css'
 function App() {
   return (
     <>
-      <h1>Calculator</h1>
+      <div id="calculator">
+        <input type="text" id="display" />
+        <div id="buttons-container">
+          <button>C</button>
+        </div>
+      </div>
     </>
   )
 }
