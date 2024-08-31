@@ -515,7 +515,8 @@ color:orange;		CSS Modules Compiler		color:orange;
 
 
 
-
+							  23. Passing Children
+						    =================================
 
 
 
