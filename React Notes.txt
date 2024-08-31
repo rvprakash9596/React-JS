@@ -22,8 +22,12 @@
 16.Reusable Components
 17.Including Bootstrap
 18.Fragments
-
+19.Map Methods
+20.Conditional Rendering
+21.Passing Data via Props
+22.CSS Modules
 --------------------------------------------------------------------------------------------------------------------------------------
+
 							1. What is React
 						================================
 
@@ -369,6 +373,153 @@ export default App;
 
 							     20.Conditional Rendering
 						  	=================================
+
+Condiional Rendering :
+----------------------
+Displaying Content based on certain conditions.
+Allows for dynamic user interface.
+
+Methods:
+--------
+1.if-else statements: Choose between two blocks of content.
+2.Ternary operators: Quick way to choose between two options.
+3.Logical operators: Useful for rendering content when a condition is true.
+
+Benefits:
+---------
+*Enhance user experience.
+*Reduces unnecessary rendering.
+*Make Apps more interactive and responsive.
+
+{condition && <div> Write Something </div>}
+
+{!condition ? <div> Error do it again </div> : <div>Congratulations</div>}
+
+
+Example 1:if-else statements
+----------------------------
+
+function App() {
+  // let foodItems = ['Tea','Roti','Milk','Green Vegetables','Rice',"Ghee"];
+
+  let foodItems = [];
+
+  if(foodItems.length===0){
+    return <h3>I am still hungry</h3>;
+  }
+
+  return (
+    <>
+      <h1>Healthy Foods</h1>
+      <ul className="list-group">
+        {foodItems.map((item)=><li key={item} className="list-group-item">{item}</li>)}
+      </ul>
+    </>
+  );
+}
+export default App;
+
+Example 2:Ternary operators
+---------------------------
+function App() {
+  let foodItems = [];
+  return (
+    <>
+      <h1>Healthy Foods</h1>
+      {foodItems.length===0 ? <h3>I am still hungry</h3> : null }
+      <ul className="list-group">
+        {foodItems.map((item)=><li key={item} className="list-group-item">{item}</li>)}
+      </ul>
+    </>
+  );
+}
+export default App;
+
+Example 3:Logical operators
+---------------------------
+function App() {
+  let foodItems = [];
+
+  // let foodItems = ['Tea','Roti','Milk','Green Vegetables','Rice',"Ghee"];
+
+  return (
+    <>
+      <h1>Healthy Foods</h1>
+      {foodItems.length===0 && <h3>I am still hungry</h3>};
+      <ul className="list-group">
+        {foodItems.map((item)=><li key={item} className="list-group-item">{item}</li>)}
+      </ul>
+    </>
+  );
+}
+export default App;
+
+
+							    21. Passing Data via Props
+						  	==================================
+Props in React :
+---------------
+.Short for properties
+.Mechanism for passing data
+.Read-only by default
+
+Usage :
+-------
+.Pass data from parent to child component
+.Makes component reusable
+.Defined as attributes in JSX
+
+Key Points :
+------------
+.Data flows one-way(downwords)
+.Props are immutable
+.Used for communication between components
+
+Example:
+--------
+<Header title="My App"/>
+
+								Parent
+								   |
+								   |
+						     -------------------------------	
+				  Props --------->   |      			        |	 <--------- Props
+						   Child			  Child
+						     |				    |
+				Props --------->     |				    |	 <--------- Props
+						Grand Child			Grand Child
+
+
+
+								Fig: Props in React
+								------------------
+
+
+
+
+							     22. CSS Modules
+						    =================================
+
+Cat.css								CSS
+-------							-------------------
+.meow{							.cat_meow_j3xl{
+color:orange;		CSS Modules Compiler		color:orange;
+}							}
+
+1.Localize class names to avoid global conflicts.
+2.Styles are scoped to individual components.
+3.Helps in creating component-specific styles.
+4.Automatically generates unique class names.
+5.Promotes modular and maintainable CSS.
+6.Can use alongside global CSS when needed.
+
+
+
+
+
+
+
+
 
 
 
