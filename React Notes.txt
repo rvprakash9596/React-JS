@@ -26,6 +26,7 @@
 20.Conditional Rendering
 21.Passing Data via Props
 22.CSS Modules
+23.Passing Children
 --------------------------------------------------------------------------------------------------------------------------------------
 
 							1. What is React
