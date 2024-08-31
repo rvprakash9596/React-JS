@@ -1,13 +1,13 @@
-import './App.css'
+import Display from "./components/Display"
+import ButtonsContainer from "./components/ButtonsContainer"
+import styles from './App.module.css'
 
 function App() {
   return (
     <>
-      <div id="calculator">
-        <input type="text" id="display" />
-        <div id="buttons-container">
-          <button>C</button>
-        </div>
+      <div className={styles.calculator}>
+        <Display></Display>
+        <ButtonsContainer></ButtonsContainer>
       </div>
     </>
   )
