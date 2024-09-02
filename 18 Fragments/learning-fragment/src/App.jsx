@@ -11,12 +11,23 @@ function App() {
 
   return (
 
+      <>
       <Container>
       <h1 className="food-heading">Healthy Foods</h1>
       <ErrorMessage items={foodItems}>
       </ErrorMessage>
       <FoodItems items={foodItems}></FoodItems>
       </Container>
+
+      <Container>
+        <p>
+          Above is the list of healthy foods that are good for health and 
+          Well being.
+        </p>
+      </Container>
+
+      </>
+
       
   );
 }
