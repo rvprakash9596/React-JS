@@ -552,6 +552,29 @@ return(
 5.Avoid inline arrow functions in JSX for performance.
 
 
+						     25. Passing Function via Props
+						    =================================						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
