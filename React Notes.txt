@@ -436,6 +436,7 @@ function App() {
 }
 export default App;
 
+
 Example 3:Logical operators
 ---------------------------
 function App() {
@@ -500,6 +501,7 @@ Example:
 
 							     22. CSS Modules
 						    =================================
+
 
 Cat.css								CSS
 -------							-------------------
